@@ -1,4 +1,4 @@
 size,name,price,flavor,frosting,filling,sprinkles,tops
-regular,Stars and Stripes,2.99,Vanilla,Vanilla,Chocolate,"['Red', 'White', 'Blue']",['Miniature American Flag Ring']
+regular,Captain America,2.99,Vanilla,Vanilla,Chocolate,"['Red', 'White', 'Blue']",['miniature Captain America shield ring']
 mini,Oreo,0.99,Chocolate,Cookies and Cream,,['Oreo pieces'],[]
-large,Red Velvet,3.99,Red Velvet,Cream Cheese,,[],['Single strawberry slice']
+large,Iron Man,3.99,Red Velvet,yellow colored cream cheese,,[],['miniature Iron man helmet ring']

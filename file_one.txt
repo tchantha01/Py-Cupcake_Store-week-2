@@ -1,1 +1,6 @@
 This is my first txt file!
+
+
+# f = open('file_one.txt','w+')
+# f.write('This is my first txt file!')   
+# f.close() 

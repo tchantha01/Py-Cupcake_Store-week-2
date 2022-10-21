@@ -12,7 +12,7 @@ def read_csv(file):
 read_csv("sample.csv")            
 
 
-
+# Cupcake classes
 class Cupcake(ABC):
     
     size = "regular"
@@ -68,48 +68,14 @@ class Large(Cupcake):
     def calculate_prices(self, quantity):
         return quantity * self.price             
 
-# my_cupcake_large = Large("Chocolate Silk", 4.50, "Chocolate", "chocolate", "chocolate")
-# print(my_cupcake_large.name)
-
-
-# my_cupcake_mini = Mini("Chocolate", 1.50, "Chocolate", "white")
-# print(my_cupcake_mini.name)
-# print(my_cupcake_mini.price)
-# print(my_cupcake_mini.size)
-
-# my_cupcake = Cupcake("Strawberry Shortcake", 2.50, "vanilla", "strawberry", "strawberry") 
-
-# my_cupcake.add_sprinkles("Oreo crumbs", "strawberry", "chocolate")
-
-# my_cupcake.add_tops("decoder ring", "princess figure", "Marvel figures")
-
-# print(my_cupcake.tops)
-
-# print(my_cupcake.sprinkles)
-
-# print(my_cupcake.name)
-
-
-# my_cupcake.name = "Triple Chocolate"
-# my_cupcake.frosting = "chocolate"   
-# my_cupcake.filling =  "chocolate"  
-# my_cupcake.sprinkles = True   
-
-# print(my_cupcake.name)
-
-
-# f = open('file_one.txt','w+')
-# f.write('This is my first txt file!')   
-# f.close() 
-
- 
-cupcake1 = Regular("Stars and Stripes", 2.99, "Vanilla", "Vanilla", "Chocolate")
+# Cupcake instances 
+cupcake1 = Regular("Captain America", 2.99, "Vanilla", "Vanilla", "Chocolate")
 cupcake1.add_sprinkles("Red", "White", "Blue")
-cupcake1.add_tops("Miniature American Flag Ring")
+cupcake1.add_tops("miniature Captain America shield ring")
 cupcake2 = Mini("Oreo", 0.99, "Chocolate", "Cookies and Cream")
 cupcake2.add_sprinkles("Oreo pieces")
-cupcake3 = Large("Red Velvet", 3.99, "Red Velvet", "Cream Cheese", None)
-cupcake3.add_tops("Single strawberry slice")
+cupcake3 = Large("Iron Man", 3.99, "Red Velvet", "yellow colored cream cheese", None)
+cupcake3.add_tops("miniature Iron man helmet ring")
 
 cupcake_list = [
     cupcake1,
@@ -117,7 +83,7 @@ cupcake_list = [
     cupcake3
 ]
 
-
+# Functions to add cupcake classes to file
 def add_cupcake(file, cupcake):
     with open(file, "a", newline="\n") as csvfile:
         fieldnames = ["size", "name", "price", "flavor", "frosting", "filling", "sprinkles", "tops"]
@@ -143,6 +109,10 @@ def write_new_csv(file, cupcakes):
             else: 
                 writer.writerow({"size": cupcake.size, "name": cupcake.name, "price": cupcake.price, "flavor": cupcake.flavor, "frosting": cupcake.frosting, "sprinkles": cupcake.sprinkles, "tops": cupcake.tops})   
             
-write_new_csv("sample.csv", cupcake_list)            
+write_new_csv("sample.csv", cupcake_list)  
+
+# Functions to add the cupcake dictionaries to file          
         
-        
+# f = open('file_one.txt','w+')
+# f.write('This is my first txt file!')   
+# f.close()         

@@ -72,7 +72,7 @@ class Large(Cupcake):
 cupcake1 = Regular("Captain America", 2.99, "Vanilla", "Vanilla", "Chocolate")
 cupcake1.add_sprinkles("Red", "White", "Blue")
 cupcake1.add_tops("miniature Captain America shield ring")
-cupcake2 = Mini("Oreo", 0.99, "Chocolate", "Cookies and Cream")
+cupcake2 = Mini("Black Panther", 0.99, "Chocolate", "Cookies and Cream")
 cupcake2.add_sprinkles("Oreo pieces")
 cupcake3 = Large("Iron Man", 3.99, "Red Velvet", "yellow colored cream cheese", None)
 cupcake3.add_tops("miniature Iron man helmet ring")

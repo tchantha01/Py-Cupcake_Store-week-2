@@ -1,11 +1,15 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+from cupcakes import get_cupcakes, find_cupcake, add_cupcake_dictionary
+
 @app.route("/")
 def home():
-    return render_template("index.html")
+    cupcakes = get_cupcakes("cupcakes.csv")
+    order = get_cupcakes("orders.csv")
+    order_total = round(sum([float(x["price"]) for x in order]), 2)
+    return render_template("index.html", cupcakes=cupcakes, items_num=len(order), order_total=order_total)
 
 @app.route("/cupcakes")
 def all_cupcakes():

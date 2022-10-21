@@ -1,0 +1,6 @@
+size,name,price,flavor,frosting,filling,sprinkles,tops
+regular,Captain America,2.99,vanilla,vanilla,chocolate,"['red', 'white', 'blue']",['miniature Captain America shield ring']
+mini,Black Panther,0.99,chocolate,cookies and cream,,['Oreo pieces'],[]
+regular,Iron Man,2.99,red velvet,yellow colored cream cheese,,[],['miniature Iron man helmet ring']
+large,Incredible Hulk,3.99,vanilla,green colored chocolate,,['chocolate'],[]
+regular,Thor,2.99,vanilla,blue and yellow swirl vanilla,,['blue pop rocks'],['miniature Thor hammer ring']

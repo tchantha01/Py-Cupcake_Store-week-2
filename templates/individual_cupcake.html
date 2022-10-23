@@ -6,10 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-    <title>cupcakes</title>
+    <title>{{ cupcake["name"] }}</title>
 </head>
 <body>
-    <h1>The Cupcakes</h1>
-    
+    <header>
+        <h1>{{ cupcake["name"] }}</h1>
+    </header>
+    <main>
+        <a href="{{ url_for("home") }}"><h6>Home Base</h6></a>
+
+        <div class="cupcake_container">
+            <a href="{{ url_for("individual_cupcake", name=cupcake["name"]) }}">
+                <h3>{{ cupcake["name"] }}</h3>
+            </a>
+            <h4>Flavor: {{ cupcake["flavor"] }}</h4>
+            <h4>Frosting: {{ cupcake["frosting"] }}</h4>
+            <h4>Price: ${{ cupcake["price"] }}</h4>
+            <a href="{{ url_for("individual_cupcake", name=cupcake["name"]) }}">    
+                <button>Add to team</button>
+            </a>
+        </div>
+        
+    </main>    
+
+
+
+
+
+
+
 </body>
 </html>

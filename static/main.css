@@ -5,3 +5,13 @@ body {
     background-size: cover;
     
   }
+
+  .cupcake_container {
+   
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 200px;
+    border: 15px solid lightslategray;
+    padding: 30px;
+    margin: 10px;
+    font-family: 'Lucida Sans';
+  }  

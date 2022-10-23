@@ -28,7 +28,7 @@ def cupcake_order():
     cupcake_set = set()
     
     for cupcake in cupcakes:
-        cupcake_set.add(cupcake["name"], cupcake["price"], cupcake.count(cupcake))
+        cupcake_set.add((cupcake["name"], cupcake["price"], cupcakes.count(cupcake)))
     
     
     return render_template("cupcake_order.html", cupcakes=cupcake_set)

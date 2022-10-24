@@ -3,15 +3,62 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    
-  }
+}
 
-  .cupcake_container {
-   
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    width: 200px;
+
+
+.cart_container {
+    text-align: center;
+}  
+
+.cupcake_container {
     border: 15px solid lightslategray;
-    padding: 30px;
-    margin: 10px;
+    border-radius: 10px;
+    margin-top: 5%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+} 
+  
+  .cupcake_display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     font-family: 'Lucida Sans';
-  }  
+}  
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;  
+}
+
+h7 {
+    color: white;
+    text-align: center; 
+}  
+
+h8 {
+    color: white;
+    text-align: center;
+}
+
+a {
+    text-align: center;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+    

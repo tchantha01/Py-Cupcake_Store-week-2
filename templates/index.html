@@ -11,11 +11,33 @@
 <body>
     <header>
         <h1>Marvel-ous Cupcakes</h1>
+        <div class="cart_container">
+            <a href="{{ url_for("cupcake_order") }}"> 
+                <h7>Cart - {{ items_num }}</h7>
+            </a>
+                <h7>Total: ${{ order_total }}</h7>
+        </div>           
+    </header>
+    <div class="cupcake_display">
+        {% for cupcake in cupcakes %}
+            <div class="cupcake_container">
+                <a href="{{ url_for("individual_cupcake", name=cupcake["name"]) }}">
+                    <h3>{{ cupcake["name"] }}</h3>
+                </a>
+                <div class="flavor_frosting">
+                    <h8>Flavor: {{ cupcake["flavor"] }}</h8>  
+                    <h8>Frosting: {{ cupcake["frosting"] }}</h8>  
+                </div>
+                <h8>Price: ${{ cupcake["price"] }}</h8>
+                <a href="{{ url_for("individual_cupcake", name=cupcake["name"]) }}">
+                    <button class="button">Add to Team</button>   
+                <a/>
+            </div>             
 
 
 
-
-
+        {% endfor %}
+    </div>    
     </header>
 </body>
 </html>

@@ -9,7 +9,37 @@
     <title>cupcake_order</title>
 </head>
 <body>
-    <h1>Cupcake Order</h1>
+    <h1>Your Assembled Team</h1>
+    <main>
+        <a href="{{ url_for("home") }}"><h6>Home Base</h6></a>
+
+        <h2>Your Team</h2>
+        <table class="table_chart" id="cupcake_order">
+            <th>
+                <h5>Cupcake</h5>
+            </th>
+            <th>
+                <h5>Price</h5>
+            </th>
+            <th>
+                <h5>Quantity</h5>
+            </th>
+            {% for cupcake in cupcakes %} 
+            <tr>
+                <td>
+                    <h6>{{ cupcake[0] }}</h6>
+                </td>
+                <td>
+                    <h6>Price: {{ cupcake[1] }}</h6>
+                </td>
+                <td>
+                    <h6>Qty: {{ cupcake[2] }}</h6>
+                </td>
+            </tr>
+            {% endfor %}  
+        </table>                         
+    </main>    
+
     
 </body>
 </html>

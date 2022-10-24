@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for, redirect
 
 app = Flask(__name__)
 
@@ -16,7 +16,8 @@ def individual_cupcake(name):
     cupcake = find_cupcake("cupcakes.csv", name)
     
     if cupcake:
-        return render_template("individual_cupcake.html", cupcake=cupcake)
+        add_cupcake_dictionary("orders.csv", cupcake=cupcake)
+        return redirect(url_for("home"))
     else:
         return "Sorry cupcake not found."
 
